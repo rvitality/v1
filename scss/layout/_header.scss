@@ -24,11 +24,11 @@
             display: flex;
             align-items: center;
             gap: 1.25rem;
-            font-weight: lighter;
 
             a {
                 position: relative;
                 transition: color 0.25s ease-in;
+                font-weight: 500;
 
                 &:after {
                     content: "";
