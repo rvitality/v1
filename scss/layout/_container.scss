@@ -62,3 +62,131 @@
         font-size: 0.95rem;
     }
 }
+
+.projects {
+    margin-top: 3rem;
+
+    &__heading {
+        text-align: center;
+        padding-bottom: 2rem;
+    }
+
+    .sub-content {
+        margin-top: 0.25rem;
+    }
+
+    .project {
+        padding-top: 3rem;
+        display: flex;
+        gap: 2rem;
+        border-top: 1px solid #ccc;
+
+        .info {
+            width: 40%;
+
+            .sub-content {
+                font-size: 0.9rem;
+            }
+        }
+
+        .tech {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+            font-weight: 300;
+
+            li:not(:last-child):after {
+                content: "\00b7";
+                display: inline-flex;
+                margin: 0 0.375rem;
+            }
+        }
+
+        .links {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-size: 1.25rem;
+            margin-top: 1rem;
+
+            a {
+                transition: all 0.2s ease-in-out;
+                transform: translateY(0);
+                &:hover {
+                    transform: translateY(-1px);
+                }
+            }
+
+            a:first-child {
+                font-size: 1.35rem;
+            }
+        }
+
+        .showcase {
+            display: flex;
+            width: 60%;
+            position: relative;
+
+            &__box {
+                background-color: #fff;
+                box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+                transition: all 0.25s ease-out;
+
+                .content {
+                    padding: 1rem;
+
+                    p {
+                        font-weight: 200;
+                        font-size: 0.9rem;
+                    }
+                }
+            }
+
+            .landscape {
+                position: absolute;
+                top: 15%;
+                z-index: 1;
+                width: 100%;
+
+                img {
+                    width: 15rem;
+                }
+            }
+
+            .portrait {
+                position: absolute;
+                right: 0;
+                z-index: 2;
+
+                img {
+                    height: 15rem;
+                    object-fit: contain;
+                    width: 15rem;
+                }
+            }
+        }
+
+        &:not(:last-of-type) {
+            margin-bottom: 12rem;
+        }
+
+        &:nth-child(odd) {
+            text-align: right;
+            flex-direction: row-reverse;
+
+            .tech {
+                justify-content: flex-end;
+            }
+            .links {
+                justify-content: flex-end;
+            }
+
+            .showcase {
+                display: flex;
+                flex-direction: column;
+                text-align: left;
+                align-items: flex-start;
+            }
+        }
+    }
+}
