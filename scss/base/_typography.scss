@@ -3,19 +3,21 @@ body {
 }
 
 .heading-primary {
-    z-index: 2;
-    font-size: 7rem;
-    text-transform: uppercase;
-    text-shadow: -1px 1px #000;
-    text-align: center;
-
-    // background-image: url(https://images.unsplash.com/photo-1486365227551-f3f90034a57c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80);
-    // background-size: cover;
-    // background-clip: text;
-    // -webkit-background-clip: text;
-    // color: transparent;
+    font-size: 1.5rem;
 }
 
 .heading-secondary {
-    font-size: 3rem;
+    font-size: 1.4rem;
+    font-weight: 300;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+}
+.heading-tertiary {
+    color: #444;
+    font-size: 1.3rem;
+}
+
+.sub-content {
+    color: #888;
+    font-weight: 300;
 }
