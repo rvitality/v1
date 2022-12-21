@@ -1,5 +1,4 @@
 .container {
-    height: 200rem;
     max-width: 55vw;
     background-color: #fff;
     margin: -25vh auto 0 auto;
@@ -48,7 +47,7 @@
             font-size: 0.9rem;
 
             li:not(:last-child):after {
-                content: "\00b7";
+                content: "•";
                 display: inline-flex;
                 margin: 0 0.375rem;
             }
@@ -69,7 +68,6 @@
     }
 
     .project {
-        padding-top: 3rem;
         margin-bottom: 7.5rem;
         display: flex;
         gap: 2rem;
@@ -185,7 +183,6 @@
     margin-top: 10rem;
 
     .masonry {
-        margin-top: 2rem;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         gap: 1rem;
@@ -223,6 +220,41 @@
                     font-weight: 300;
                     color: #555;
                     margin-top: 0.25rem;
+                }
+            }
+        }
+    }
+}
+
+.work {
+    .experience {
+        display: flex;
+        gap: 2rem;
+        margin-bottom: 3rem;
+
+        &__date {
+            width: 20%;
+        }
+
+        &__info {
+            width: 100%;
+            .title {
+                font-weight: 500;
+                font-size: 1.1rem;
+            }
+
+            .desc {
+                font-weight: 300;
+            }
+
+            .tech {
+                margin-top: 0.5rem;
+                display: flex;
+
+                li:not(:last-child):after {
+                    content: "•";
+                    display: inline-flex;
+                    margin: 0 0.375rem;
                 }
             }
         }
