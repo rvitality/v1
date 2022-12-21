@@ -241,6 +241,21 @@
             .title {
                 font-weight: 500;
                 font-size: 1.1rem;
+
+                a {
+                    display: flex;
+                    align-items: center;
+                    gap: 1rem;
+
+                    i {
+                        transition: transform 0.2s ease-in-out;
+                        transform: translateY(0);
+                    }
+
+                    &:hover i {
+                        transform: translateY(-2px);
+                    }
+                }
             }
 
             .desc {
@@ -257,6 +272,22 @@
                     margin: 0 0.375rem;
                 }
             }
+        }
+    }
+}
+
+.contact {
+    &__email-link {
+        margin: 0 auto;
+        display: block;
+        border: 1px solid #aaa;
+        width: fit-content;
+        padding: 0.7rem 1.5rem;
+        transition: all 0.2s ease-out;
+
+        &:hover {
+            background-color: #000;
+            color: #fff;
         }
     }
 }
