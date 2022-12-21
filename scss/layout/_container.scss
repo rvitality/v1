@@ -64,22 +64,15 @@
 }
 
 .projects {
-    margin-top: 3rem;
-
-    &__heading {
-        text-align: center;
-        padding-bottom: 2rem;
-    }
-
     .sub-content {
         margin-top: 0.25rem;
     }
 
     .project {
         padding-top: 3rem;
+        margin-bottom: 7.5rem;
         display: flex;
         gap: 2rem;
-        border-top: 1px solid #ccc;
 
         .info {
             width: 40%;
@@ -166,10 +159,6 @@
             }
         }
 
-        &:not(:last-of-type) {
-            margin-bottom: 12rem;
-        }
-
         &:nth-child(odd) {
             text-align: right;
             flex-direction: row-reverse;
@@ -186,6 +175,53 @@
                 flex-direction: column;
                 text-align: left;
                 align-items: flex-start;
+            }
+        }
+    }
+}
+
+.hackathons {
+    margin-top: 10rem;
+
+    .masonry {
+        margin-top: 2rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1rem;
+
+        .grid {
+            border: 1px solid #ccc;
+            overflow: hidden;
+            position: relative;
+
+            &__entry-badge {
+                position: absolute;
+                top: 0;
+                left: 0;
+
+                img {
+                    width: 4rem;
+                    height: 4rem;
+                }
+            }
+
+            &__thumbnail {
+                width: 100%;
+                height: 10rem;
+                object-fit: cover;
+            }
+
+            &__caption {
+                padding: 0.5rem 0.8rem;
+                .title {
+                    font-size: 1.05rem;
+                }
+
+                .tagline {
+                    font-size: 0.85rem;
+                    font-weight: 300;
+                    color: #555;
+                }
             }
         }
     }
