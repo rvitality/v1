@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="description"
+            content="Renz Vital is a software engineer who specializes in building exceptional digital experiences."
+        />
+        <link rel="apple-touch-icon" sizes="57x57" href="data:image/png;base64,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" />
+        <link rel="apple-touch-icon" sizes="60x60" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAC4jAAAuIwF4pT92AAAAB3RJTUUH5gwVBRE40+5B9gAACWxJREFUaN7lm39QVWUaxz8HLr9VEC4iogYaiCu4iWa/tExr09ZstWj3D7PdbVzXSrOasXHcmqy2H1tjbavZLxsns3Yn1FZxtFDcUqwx3EwNsWFLfiQIKMJF5HLOvc/+cS5HzhW893LPDWZ6Zr4D97zv+5zne573fd7fCqERBYgG7EAmkA2MBAYD8Z40BXACDqAJ+BH4DigH6oFWQEJhmJUyEBgHXAtM8RAdAgwConyUVT0kG4BKYB9wAPgGaLSaeLCSDOQDBR6D3ejeCRYtwB5gITAaCOtrokOBh4D9wAWLSHYHFSgDngKuxPqa6VNigPkeoh0hJOoNF/At8BiQ9FORHQm8CjT/hES94QT+BVxNCKt5GDATPZC4+pBsV3wP/AHfATFgsQF3Ayf7AUlvNAGPAnFWkY0CHgZO9wNyPeE8sBpICJZsOLCUvm2vgbTrV9DHAr0SBZgH1PUDMv6iDViFPpILWG5FDwp9TSJQtKAPVALqq4cDn/UD43uLCmCiv2QjgRfpP11Pb7EFfcjrU/LRQ31fGxwsVGAlPqq2HdjdD4y1CieAX3QlaPMifCcwtftvoTBhQh5ZWVciIgBomosDB76gru4UAOnp6UyePPliCUWhrKyMo0ePGs9yxo1nVPpY3CIonYNCufg3IgoUP8KN2w0uTaG2rpJD/z2I2+3uLlsWcB+wAn0GZ5IEoOhyX2zRosXidDpF0zTRNE1UVZO/Pvu8hIWFCSCTJ0+WiooKcbvdommauN1u2bt3r4wYMcLQce/8BeJobpMOp0ucTs2Mdk3UDl2vT3Ro0n5BlceXr/Dl5XJvL3fKbPTVhx4Lp6SkSGFhoXSV6uoauXnaLQKIoiiyfPkKUVXNSHe53LJq1SrjoyQmJsrOnTvFCjl4sFSuuCLdn6r9vDfZaOBdf9rFzdNultOn600v3lG4SwYPThRAhqWmScn+A6b0ysoqycubZOiYOXOWnD59Oiiyzc0tcu+9C/xty1+jd7WEewiPA/6Cvt50WTl1qpaMjFFMmnSxm0sbnsbxsnKOHjuCo9WBgsJtM2/DZtNDRHx8PKqqsnt3EW63m8rKKhIT7YzOyMLR0karo2c4HK1ERkVgs4Wb7Ni2rZAXXngeVe3w3eB1XvvR18wAuJ8A+t3x46+Sior/mb54ScmXMmxYmgCSkDBYNm360JTe0NAgd94519ARH58gYzJzZGzWeMnOytWRmXvx/6xcGZOZIzdcP03Kvj1h0lVbWyc3Tr0p0Ij9Mp65cwTwTiCFFUWRJ554Ulwul2FER4cqS5cuM/JMmTJVamvrTIYWfbpbEhOTAjJ0wYL7pK2tzaRn3etvSGRkZKCE96GvmpIMHAywsKSmpklR0R6TIcePl0teXp4AYrNFyOrVr5jS29udsuhPf/b7HdnZ2VJaesik48g3RyU3d3xv+uRK4CqACUBVLxTIHbPnSFPTOZNB69e/K9HRMR6Dx0r5cXN1PHz4iKSnj/Kp22aLkL+/+pqprLPdKYsW+f/BvHAeWAD6ULKlN0ri4uLko48KvNpqo8yYfrGbWrnyCdE0veqrqipFRXskM3OMT93XXHOt1NT8aNL92WefS0rK0N4SdgPPACwHtF4qkRnTb7mkm9q69WMZNCjeU/VTZefOXXLkyDF5eOkjMnRoqk+dsbFxsnHj+yadDodD8vPv6S3ZTrwN8LdglERERMrLL682GXf+fJssXLjIyJMzLkcyM7P81nn7rF9f0lS2bNkqAwcODJbwvwHWBKlEsrPHSlnZcZOB+z4vkWT7kMuWCw8Pv+TZsGGXBsOTJytlypSpwZLtjNS8ZYEiWbbsUVFVVTTNJcXF/5H8/HskKiqq27wx0TEyb+5d8vTTz4jdnmw8VxRFHn98hWia19D0qadFUcKsIFxqGeHhw4fLhx/+U1atelbS0kZ0m0dRFMnNHS9vvvm2nD3bJO3tTnlk2WNGenR0tGwu2Gry7rFj30rmlf43B38IB12lO8kMGDBQbDbbZaN6QcFmE6HvTnwnOTk5Rp67786XlhaH3g05nbJkyVKryBpV+iULFV6C+Ph4SRmSYvxesmSpdHR0mEi/+OJLRnseMGCgbNjwnoiI7CjcIUlJdivt2QZBdks9ITIySqZPnyHbtm2XgoItRltNTh4ixcV7TYRran6U66673ig7adLVUlp6SGbNvN1qB7wNQQw8esLIkSNl7Zq1Ul/f4KmaHfLAAw8a6XPn3iVnzzaZSG/atMnodmw2m+TlTZSYmBgryRoDj14PLXvC2LGXdlOlpYdk1KjRnuAUI2+99Y7XwKJV5s+fH7KmRZehZa8mD75w//0L5cKFdoOQ2y3y2mv/kIgIfZYzYUKe/PD9DybSXxz4UtLShoeKsDF5iAQ2WP0Cu90ue/YUmwidOlUrN9ygDyDCw8LluedeMKWrqioPPmRpVO6KEiAxDH0Hfx/drOoFI42NjaxZs4aWFofxLDV1KIsXLyY2NhaX28X69ev56qtD5oJipRUm+QI41/njl1jcjkGfBLy/8QOTF5ubm2Xu3HlGnt/e8ztpbW0VEZFPPymS5OQhofBuG3BHV/Z+L+IFiptunCZVVdUm0rt2fSJDPdO8+PgE2b59h5w5c1Zmz74jVNX5a7wW8TT0Na056G3aMqmqqiQubgDTpt2E4llhz8hIp+lcMyUl+2lvb6ehoYGammo2btyIy+Wy8vWdsgHY6v0wCdgbii+ckT5KDh8+avJyefkJyR6TbfS7sbGxofJuBXqTpauHQT9nZUM/uGJeEw1Szp1rIkyxceutMwgP11UnJSVxod3J3uJiNJeGqqqh8CzAeuADegiHIdtMS0qyy+bNH5u8XHuqTm771cxQeVboZjPN+4xTI/AmXcK3VXLmTCPrXl9LY+MZ49ngxMGkZ2RY7lKPaMB7wHFfGaPQl30s3xCPioqSdeveMDxcWLhTkhItnQ11xVb83BAHSEfvqC03ZOLEiVJdXS0OR6vMmfObUJE9CVzfHbGegtM59IHIFDyr9VZJfX09CQlJ1NTUsHbtGn/3hgIRB/o+2bZAC4bs2JLdnizDUtNC4dmgji3Bz+xgWqd0Hj2s7wekeoJlRw87xQb8Hv1eQl+T80Yz8KQVnvWW/np8+I+E4PhwV/nZHBDvKj+rKwBd5ae65KHRx5c8vGUIsBj4FGuv8TSjx4yV6Be+gq6+Vn+pQeizEysvah1Bn9SIFQaGqmr026t4/wf2ypzJs9hEeAAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAyMi0xMi0yMVQwNToxNzo1MCswMDowMD/W6l0AAAAldEVYdGRhdGU6bW9kaWZ5ADIwMjItMTItMjFUMDU6MTc6NTArMDA6MDBOi1LhAAAAIHRFWHRzb2Z0d2FyZQBodHRwczovL2ltYWdlbWFnaWNrLm9yZ7zPHZ0AAAAYdEVYdFRodW1iOjpEb2N1bWVudDo6UGFnZXMAMaf/uy8AAAAYdEVYdFRodW1iOjpJbWFnZTo6SGVpZ2h0ADE5MkBdcVUAAAAXdEVYdFRodW1iOjpJbWFnZTo6V2lkdGgAMTky06whCAAAABl0RVh0VGh1bWI6Ok1pbWV0eXBlAGltYWdlL3BuZz+yVk4AAAAXdEVYdFRodW1iOjpNVGltZQAxNjcxNTk5ODcwzzoG+QAAAA90RVh0VGh1bWI6OlNpemUAMEJClKI+7AAAAFZ0RVh0VGh1bWI6OlVSSQBmaWxlOi8vL21udGxvZy9mYXZpY29ucy8yMDIyLTEyLTIxLzg2OGM2ZThmZTVlMjczNjQ0MjdhMzc2ZDhiMGJiYzg0Lmljby5wbmffgkozAAAAAElFTkSuQmCC" />
+        <link rel="apple-touch-icon" sizes="72x72" href="data:image/png;base64,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" />
+        <link rel="apple-touch-icon" sizes="76x76" href="data:image/png;base64,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" />
+        <link rel="apple-touch-icon" sizes="114x114" href="/v1/assets/apple-icon-114x114-9e063ce9.png" />
+        <link rel="apple-touch-icon" sizes="120x120" href="/v1/assets/apple-icon-120x120-feb2fe91.png" />
+        <link rel="apple-touch-icon" sizes="144x144" href="/v1/assets/apple-icon-144x144-d8dfe2a3.png" />
+        <link rel="apple-touch-icon" sizes="152x152" href="/v1/assets/apple-icon-152x152-d3f0b95a.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/v1/assets/apple-icon-180x180-45d15ed9.png" />
+        <link rel="icon" type="image/png" sizes="192x192" href="/v1/assets/android-icon-192x192-827569a5.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAC9FBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAwQoKCkyMjIeHh4WFhYtLS0KCgoBAQEgHyQqKTEpKTApKDAsKzAuLTAtLTElJCkEBAWRkZLy8vLBwMIbGxxDQ0Ti4uPr6+toaGl/foLr6vDo6O3o5+3q6e3r6+3r6u3u7vGfnqIHBwc8PD3n5+j///+EhIYICAmhoaLPz9AfHyAvLy/b2tz8+/77+vz6+fv+/v7t7e1KSkqDg4Th4eI0NDU3Nzjl5eaJiYoCAgIxMDRNSlRMSVJJRlB4dn319faXl5gDAwMhISLMzM2jo6OCgoPl5eWOjo7a2touLi9iYmP8/PxQUFHQ0NFEQ0Tu7u96ensSEhK2tre9vb4TEhNHR0dNTE4FBQUODg+tra7FxcYYGBlNTU3x8fLJyMoqKisJCQk+Pj8UFBRfX2D6+vr29vdeXl8JCQpVVVYLCwuMjI3x8fFzcnN9fX6tra1DQ0OampvV1NUlJSYqKirAv8EvLzDLy8w7OzwxMTLg4OEEBAQeHR4iIiPNzc6qqqvp6elgX2H6+vv29vZYWFkcGxzJyMlwcHEPDxCwsLHBwcJeXV67ursXFxdHR0jv7/B1dXYODg6VlZbX19gpKSowMDHf39/q6us6Ojx4eHiPj5ATExQz3qBFAAAAYHRSTlMAD0l5nsTX2MikfVMVG2i58fRzJQlY/tVnGZH1+qUgrcEuGKzCJgeOqlX7cMPWJ2P9ggyxQez2XZ2St9TmuJNE7fdfDbTKGmSExtkq/HUIlK4QsscpIzKaYMxxvH9Lr5g+a4QpAAAAAWJLR0SGjN47XQAAAAlwSFlzAAAuIwAALiMBeKU/dgAAAAd0SU1FB+YMFQURONPuQfYAAAIbSURBVDjLY2CAA0YmZhZWNnYOTi5uHgZMwMvHL5AABYKsQsJo0iKiHGIJyEBcghFZXlJKOgENyMgiGSInn4AFKCjC5JWUE7ACFVWIvJp6Ag6gAXGHpiAuBVraYAt0EhISk5JTElKT09IzMrOyc3LzgCC/oDAhQVcPqEDfICGhsKi4pLSsvKIyoaq6prauvr6+obGpGWiGIQODkTHIsJbWtvaOzrau7p7evv7+/gkT2yZNBolzSDKYmIIYGVPapk6bPqNt5qzZc+bOnTd/QdvCRSBxM3MGIUgILl7StrR5WdvyFhBn0Yq2lasg7rRgsIS6ePWa4rWL1xWvBrHXb2jbCBW2YrCCsjZtbtuyddv2HUDmzl1tu/dAha0ZOGCe3rtv/4GEhIOHDiccOXrsOEzUBqHgxMnFCQmnTp85m3Cu7Xw6QoEtUsgtvnDwYtuly1euliGincEOIX/t+owbN2+1Fd2+swMuZgvzJgjcvdd2/+DGtgdlSIayMNg7IHgPHz1+8vRZ23OEiKMTg7MLgvviZdurw6/fvEWIuLoxMLgbIPjv3rd9+NiDZIMHMDbdPBH8wk9tn78gyXt5gxKEKFKC/frt+w8Ez8cXnKL8/JH0/Pw1C8EJCITmmSCE2O89CHZwCCxZhyL5BEk+DCnfhWNmHGU9lKwXEWmAIs8WhZL1QIYIRQvAZKU9Y1Sx5G/GWKk4Vl12DuN4TaTsDwB3S1mcjk44lAAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAyMi0xMi0yMVQwNToxNzo1MCswMDowMD/W6l0AAAAldEVYdGRhdGU6bW9kaWZ5ADIwMjItMTItMjFUMDU6MTc6NTArMDA6MDBOi1LhAAAAIHRFWHRzb2Z0d2FyZQBodHRwczovL2ltYWdlbWFnaWNrLm9yZ7zPHZ0AAAAYdEVYdFRodW1iOjpEb2N1bWVudDo6UGFnZXMAMaf/uy8AAAAYdEVYdFRodW1iOjpJbWFnZTo6SGVpZ2h0ADE5MkBdcVUAAAAXdEVYdFRodW1iOjpJbWFnZTo6V2lkdGgAMTky06whCAAAABl0RVh0VGh1bWI6Ok1pbWV0eXBlAGltYWdlL3BuZz+yVk4AAAAXdEVYdFRodW1iOjpNVGltZQAxNjcxNTk5ODcwzzoG+QAAAA90RVh0VGh1bWI6OlNpemUAMEJClKI+7AAAAFZ0RVh0VGh1bWI6OlVSSQBmaWxlOi8vL21udGxvZy9mYXZpY29ucy8yMDIyLTEyLTIxLzg2OGM2ZThmZTVlMjczNjQ0MjdhMzc2ZDhiMGJiYzg0Lmljby5wbmffgkozAAAAAElFTkSuQmCC" />
+        <link rel="icon" type="image/png" sizes="96x96" href="/v1/assets/favicon-96x96-278645dd.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABJlBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHBwdqamtGRkdSUlJeXl4tLC+FhYqLi4+Mi42LioxpaWsIBwh0dHTFxcZiYmPV1dZSUlOHhoqcmp+vrrH29vd3d3cTExO+vr6Dg4OZmZqLi4x5eXrDw8QWFhdTU1O8u7wtLS0oKCgXFxgqKivU1NVXV1cICAgnJycgICFXVlezs7RMTE2SkpILCwscHB2+vr/ExMR4eHgMDA0CAgKKiou1tbVpaWp9fX4hISHOzs5ra2wKCgplZWVnZ2cICAn///95Pb+3AAAAIXRSTlMAAzaQ0e3UlToED3vk54ISDpr8/aMBeoQ04T2MmczX8pFoawh/AAAAAWJLR0RhsrBMhgAAAAlwSFlzAAAuIwAALiMBeKU/dgAAAAd0SU1FB+YMFQURONPuQfYAAAC5SURBVBjTY2BgYGBkYmZhZWVj5+BkAAMubh5FMODl4wfxBQSFFKFAWAQoIioG5wNFxBkZJCSVlFVU1dQ1NLW0dXR5pRikFRX19A0MjYxNTM3MFRVlGGQVFS0sraxtFBVt7ewVFeUYeIFaHRydnF1c3dyBTHmwgIenl7ePr58/WEAWZHpAoEFQcAiIJQcyVFExNCw8IhJssQzQWhAdFR0TC3asFMxhcfEwh0Gd7pEAczqm50DeV0B4HwDflSDYibyVdwAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAyMi0xMi0yMVQwNToxNzo1MCswMDowMD/W6l0AAAAldEVYdGRhdGU6bW9kaWZ5ADIwMjItMTItMjFUMDU6MTc6NTArMDA6MDBOi1LhAAAAIHRFWHRzb2Z0d2FyZQBodHRwczovL2ltYWdlbWFnaWNrLm9yZ7zPHZ0AAAAYdEVYdFRodW1iOjpEb2N1bWVudDo6UGFnZXMAMaf/uy8AAAAYdEVYdFRodW1iOjpJbWFnZTo6SGVpZ2h0ADE5MkBdcVUAAAAXdEVYdFRodW1iOjpJbWFnZTo6V2lkdGgAMTky06whCAAAABl0RVh0VGh1bWI6Ok1pbWV0eXBlAGltYWdlL3BuZz+yVk4AAAAXdEVYdFRodW1iOjpNVGltZQAxNjcxNTk5ODcwzzoG+QAAAA90RVh0VGh1bWI6OlNpemUAMEJClKI+7AAAAFZ0RVh0VGh1bWI6OlVSSQBmaWxlOi8vL21udGxvZy9mYXZpY29ucy8yMDIyLTEyLTIxLzg2OGM2ZThmZTVlMjczNjQ0MjdhMzc2ZDhiMGJiYzg0Lmljby5wbmffgkozAAAAAElFTkSuQmCC" />
+        <link rel="manifest" href="data:application/json;base64,ewogIm5hbWUiOiAiQXBwIiwKICJpY29ucyI6IFsKICB7CiAgICJzcmMiOiAiXC9hbmRyb2lkLWljb24tMzZ4MzYucG5nIiwKICAgInNpemVzIjogIjM2eDM2IiwKICAgInR5cGUiOiAiaW1hZ2VcL3BuZyIsCiAgICJkZW5zaXR5IjogIjAuNzUiCiAgfSwKICB7CiAgICJzcmMiOiAiXC9hbmRyb2lkLWljb24tNDh4NDgucG5nIiwKICAgInNpemVzIjogIjQ4eDQ4IiwKICAgInR5cGUiOiAiaW1hZ2VcL3BuZyIsCiAgICJkZW5zaXR5IjogIjEuMCIKICB9LAogIHsKICAgInNyYyI6ICJcL2FuZHJvaWQtaWNvbi03Mng3Mi5wbmciLAogICAic2l6ZXMiOiAiNzJ4NzIiLAogICAidHlwZSI6ICJpbWFnZVwvcG5nIiwKICAgImRlbnNpdHkiOiAiMS41IgogIH0sCiAgewogICAic3JjIjogIlwvYW5kcm9pZC1pY29uLTk2eDk2LnBuZyIsCiAgICJzaXplcyI6ICI5Nng5NiIsCiAgICJ0eXBlIjogImltYWdlXC9wbmciLAogICAiZGVuc2l0eSI6ICIyLjAiCiAgfSwKICB7CiAgICJzcmMiOiAiXC9hbmRyb2lkLWljb24tMTQ0eDE0NC5wbmciLAogICAic2l6ZXMiOiAiMTQ0eDE0NCIsCiAgICJ0eXBlIjogImltYWdlXC9wbmciLAogICAiZGVuc2l0eSI6ICIzLjAiCiAgfSwKICB7CiAgICJzcmMiOiAiXC9hbmRyb2lkLWljb24tMTkyeDE5Mi5wbmciLAogICAic2l6ZXMiOiAiMTkyeDE5MiIsCiAgICJ0eXBlIjogImltYWdlXC9wbmciLAogICAiZGVuc2l0eSI6ICI0LjAiCiAgfQogXQp9" />
+        <meta name="msapplication-TileColor" content="#ffffff" />
+        <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
+        <meta name="theme-color" content="#ffffff" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&family=Raleway:wght@200;300;400;500;600&display=swap"
+            rel="stylesheet"
+        />
+        <script src="https://kit.fontawesome.com/e8b995ce2a.js" crossorigin="anonymous"></script>
+        <title>Renz Vital</title>
+      <script type="module" crossorigin src="/v1/assets/index-ec808ebb.js"></script>
+      <link rel="stylesheet" href="/v1/assets/index-087a83c7.css">
+    </head>
+    <body>
+        <header class="header">
+            <div class="content">
+                <div class="left">
+                    <a href="#" class="logo">
+                        <img src="/v1/assets/logov1-29c51894.png" alt="Logo" />
+                    </a>
+
+                    <nav>
+                        <ul class="left__links">
+                            <li>
+                                <a href="#projects">Projects</a>
+                            </li>
+                            <li>
+                                <a href="#experience">Experience</a>
+                            </li>
+                            <li>
+                                <a href="#contact">Contact</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="right">
+                    <ul class="right__social">
+                        <li>
+                            <a
+                                href="https://www.linkedin.com/in/renz-vital-2848b8157/"
+                                target="_blank"
+                            >
+                                <i class="fa-brands fa-linkedin"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="https://devpost.com/rvitality?ref_content=user-portfolio&ref_feature=portfolio&ref_medium=global-nav"
+                                target="_blank"
+                            >
+                                <i class="fa-solid fa-code"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/rvitality" target="_blank">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <button class="header__dl-resume">
+                        <i class="fa-sharp fa-solid fa-circle-down"></i>
+                        <span> Résumé </span>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <section class="cover">
+            <div class="cover__photo"></div>
+        </section>
+
+        <main class="container">
+            <!-- PROFILE -->
+            <section class="intro">
+                <img src="/v1/assets/profile-photo-6b8c25fd.jpg" class="intro__photo" alt="Profile" />
+
+                <div class="intro__profile">
+                    <div class="name">
+                        <h1 class="heading-primary">Renz Vital</h1>
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>
+
+                    <ul class="specifics">
+                        <li>@rvitality</li>
+
+                        <li>he/him</li>
+                        <li>front-end developer</li>
+                    </ul>
+                </div>
+
+                <div class="intro__about">
+                    <p>
+                        I enjoy building dynamic, creative products from start to finish. A
+                        solution-driven developer adept at contributing to highly collaborative work
+                        environment and finding solutions.
+                    </p>
+                </div>
+            </section>
+
+            <!-- PROJECTS -->
+            <section id="projects" class="projects">
+                <div class="section-heading">
+                    <h2 class="heading-secondary">Projects</h2>
+                    <p class="sub-content">Check out some of my latest projects.</p>
+                </div>
+
+                <!-- PROJECT1: EC - PC  -->
+                <div class="project">
+                    <div class="info">
+                        <h3 class="heading-tertiary">EC-PC</h3>
+                        <p class="sub-content">
+                            Electric Consumption - Price Calculator is an application that predicts
+                            a household's electric bill for a specific month using the previous
+                            rates
+                        </p>
+
+                        <ul class="tech">
+                            <li>React.js</li>
+                            <li>Python</li>
+                            <li>Flask</li>
+                            <li>SCSS</li>
+                            <li>Firebase</li>
+                        </ul>
+
+                        <div class="links">
+                            <a href="https://github.com/rvitality/ec-pc" target="_blank">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                            <a href="https://ec-pc-1d3b2.web.app/" target="_blank">
+                                <i class="fa-sharp fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="showcase">
+                        <div class="showcase__box landscape">
+                            <img src="/v1/assets/hero-51627592.png" alt="EC-PC Hero Section" />
+                            <div class="content">
+                                <h4>Hero Section</h4>
+                            </div>
+                        </div>
+                        <div class="showcase__box portrait">
+                            <img src="/v1/assets/calc-125efd37.png" alt="EC-PC Calculator" />
+                            <div class="content">
+                                <h4>Advanced Calculator</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- HACKATHONS -->
+            <section class="hackathons">
+                <div class="section-heading">
+                    <h2 class="heading-secondary">Hackathons</h2>
+                    <p class="sub-content">
+                        Winning streak since the first time I've participated.
+                    </p>
+                </div>
+
+                <div class="masonry">
+                    <!-- EMOMI -->
+                    <a class="grid" href="https://devpost.com/software/emomi" target="_blank">
+                        <figure>
+                            <img
+                                alt="emomi"
+                                class="grid__thumbnail"
+                                src="/v1/assets/emomi-c8be9bcf.jpg"
+                            />
+
+                            <figcaption class="grid__caption">
+                                <h3 class="title">emomi</h3>
+                                <p class="tagline">
+                                    Help nonverbal children express their emotions through music!
+                                </p>
+                            </figcaption>
+                        </figure>
+
+                        <aside class="grid__entry-badge">
+                            <img
+                                alt="Winner"
+                                class="winner"
+                                src="https://q9k6x7m8.stackpathcdn.com/assets/shared/software/winner-ribbon-d6a3513950ca29607c8d8682f419dd99.png"
+                            />
+                        </aside>
+                    </a>
+
+                    <!-- READY? SING! -->
+                    <a class="grid" href="https://devpost.com/software/ready-sing" target="_blank">
+                        <figure>
+                            <img
+                                alt="Ready? Sing!"
+                                class="grid__thumbnail"
+                                src="/v1/assets/ready_sing-1d81117e.jpg"
+                            />
+
+                            <figcaption class="grid__caption">
+                                <h3 class="title">Ready? Sing!</h3>
+                                <p class="tagline">
+                                    Help theater performers ready themselves before their
+                                    performances!
+                                </p>
+                            </figcaption>
+                        </figure>
+
+                        <aside class="grid__entry-badge">
+                            <img
+                                alt="Winner"
+                                class="winner"
+                                src="https://q9k6x7m8.stackpathcdn.com/assets/shared/software/winner-ribbon-d6a3513950ca29607c8d8682f419dd99.png"
+                            />
+                        </aside>
+                    </a>
+
+                    <!-- PLUTUS -->
+                    <a
+                        class="grid"
+                        href="https://devpost.com/software/plutus-b7egl0"
+                        target="_blank"
+                    >
+                        <figure>
+                            <img
+                                alt="Plutus"
+                                class="grid__thumbnail"
+                                src="/v1/assets/plutus-93b4a7ae.jpg"
+                            />
+
+                            <figcaption class="grid__caption">
+                                <h3 class="title">Plutus</h3>
+                                <p class="tagline">
+                                    Let's help to improve teenagers' financial literacy!
+                                </p>
+                            </figcaption>
+                        </figure>
+
+                        <aside class="grid__entry-badge">
+                            <img
+                                alt="Winner"
+                                class="winner"
+                                src="https://q9k6x7m8.stackpathcdn.com/assets/shared/software/winner-ribbon-d6a3513950ca29607c8d8682f419dd99.png"
+                            />
+                        </aside>
+                    </a>
+
+                    <!-- DEIA -->
+                    <a class="grid" href="https://devpost.com/software/deia" target="_blank">
+                        <figure>
+                            <img
+                                alt="deia"
+                                class="grid__thumbnail"
+                                src="/v1/assets/deia-100d0cc0.jpg"
+                            />
+
+                            <figcaption class="grid__caption">
+                                <h3 class="title">Deia</h3>
+                                <p class="tagline">
+                                    Encourage developers to build a diverse, equitable, inclusive
+                                    and accessible internet.
+                                </p>
+                            </figcaption>
+                        </figure>
+
+                        <aside class="grid__entry-badge">
+                            <img
+                                alt="Winner"
+                                class="winner"
+                                src="https://q9k6x7m8.stackpathcdn.com/assets/shared/software/winner-ribbon-d6a3513950ca29607c8d8682f419dd99.png"
+                            />
+                        </aside>
+                    </a>
+
+                    <!-- Shoot 'Em Logs -->
+                    <a
+                        class="grid"
+                        href="https://devpost.com/software/shoot-em-logs"
+                        target="_blank"
+                    >
+                        <figure>
+                            <img
+                                alt="Shoot 'Em Logs"
+                                class="grid__thumbnail"
+                                src="/v1/assets/shoot_em_logs-a34cd1d0.jpg"
+                            />
+
+                            <figcaption class="grid__caption">
+                                <h3 class="title">Shoot 'Em Logs</h3>
+                                <p class="tagline">Help our cowboy shoot his way out of exile!</p>
+                            </figcaption>
+                        </figure>
+
+                        <aside class="grid__entry-badge">
+                            <img
+                                alt="Winner"
+                                class="winner"
+                                src="https://q9k6x7m8.stackpathcdn.com/assets/shared/software/winner-ribbon-d6a3513950ca29607c8d8682f419dd99.png"
+                            />
+                        </aside>
+                    </a>
+
+                    <!-- ONE SHELL OF A PLACE -->
+                    <a
+                        class="grid"
+                        href="https://devpost.com/software/when-there-s-a-will-there-s-a-wave"
+                        target="_blank"
+                    >
+                        <figure>
+                            <img
+                                alt="ONE SHELL OF A PLACE"
+                                class="grid__thumbnail"
+                                src="/v1/assets/one_shell_of_a_place-f10449cb.jpg"
+                            />
+
+                            <figcaption class="grid__caption">
+                                <h3 class="title">One Shell of a Place</h3>
+                                <p class="tagline">
+                                    A platform that allows you to advocate for animals with a
+                                    gamified experience.
+                                </p>
+                            </figcaption>
+                        </figure>
+
+                        <aside class="grid__entry-badge">
+                            <img
+                                alt="Winner"
+                                class="winner"
+                                src="https://q9k6x7m8.stackpathcdn.com/assets/shared/software/winner-ribbon-d6a3513950ca29607c8d8682f419dd99.png"
+                            />
+                        </aside>
+                    </a>
+
+                    <!-- THE HELPING CLUB -->
+                    <a
+                        class="grid"
+                        href="https://devpost.com/software/the-helping-club"
+                        target="_blank"
+                    >
+                        <figure>
+                            <img
+                                alt="the helping club"
+                                class="grid__thumbnail"
+                                src="https://d112y698adiu2z.cloudfront.net/photos/production/software_thumbnail_photos/002/281/593/datas/medium.jpg"
+                            />
+
+                            <figcaption class="grid__caption">
+                                <h3 class="title">The Helping Club</h3>
+                                <p class="tagline">
+                                    Kindness is giving hope to those who think they are all alone in
+                                    this world.
+                                </p>
+                            </figcaption>
+                        </figure>
+
+                        <aside class="grid__entry-badge">
+                            <img
+                                alt="Winner"
+                                class="winner"
+                                src="https://q9k6x7m8.stackpathcdn.com/assets/shared/software/winner-ribbon-d6a3513950ca29607c8d8682f419dd99.png"
+                            />
+                        </aside>
+                    </a>
+
+                    <!-- Soy Mate -->
+                    <a class="grid" href="https://devpost.com/software/soy-mate" target="_blank">
+                        <figure>
+                            <img
+                                alt="Soy Mate"
+                                class="grid__thumbnail"
+                                src="/v1/assets/soy_mate-f30c1523.jpg"
+                            />
+
+                            <figcaption class="grid__caption">
+                                <h3 class="title">Soy Mate</h3>
+                                <p class="tagline">Choose your match and find good food!</p>
+                            </figcaption>
+                        </figure>
+
+                        <aside class="grid__entry-badge">
+                            <img
+                                alt="Winner"
+                                class="winner"
+                                src="https://q9k6x7m8.stackpathcdn.com/assets/shared/software/winner-ribbon-d6a3513950ca29607c8d8682f419dd99.png"
+                            />
+                        </aside>
+                    </a>
+
+                    <!-- Time Chaser -->
+                    <a class="grid" href="https://devpost.com/software/time-chaser" target="_blank">
+                        <figure>
+                            <img
+                                alt="Time Chaser"
+                                class="grid__thumbnail"
+                                src="/v1/assets/time_chaser-b0cc6e07.jpg"
+                            />
+
+                            <figcaption class="grid__caption">
+                                <h3 class="title">Time Chaser</h3>
+                                <p class="tagline">
+                                    Advocates transparency and healthier work-life balance between
+                                    schools and teachers.
+                                </p>
+                            </figcaption>
+                        </figure>
+
+                        <aside class="grid__entry-badge">
+                            <img
+                                alt="Winner"
+                                class="winner"
+                                src="https://q9k6x7m8.stackpathcdn.com/assets/shared/software/winner-ribbon-d6a3513950ca29607c8d8682f419dd99.png"
+                            />
+                        </aside>
+                    </a>
+                </div>
+            </section>
+
+            <!-- WORK EXPERIENCE -->
+            <section id="experience" class="work">
+                <div class="section-heading">
+                    <h2 class="heading-secondary">Work Experience</h2>
+                    <p class="sub-content">
+                        Winning streak since the first time I've participated.
+                    </p>
+                </div>
+
+                <div class="experience">
+                    <div class="experience__date">2021 - 2022</div>
+                    <div class="experience__info">
+                        <h3 class="title">Front-End Developer - Freelance</h3>
+                        <p class="desc">
+                            Worked with small businesses and individuals to build digital products.
+                        </p>
+                        <ul class="tech">
+                            <li>React.js</li>
+                            <li>Redux</li>
+                            <li>Firebase</li>
+                            <li>TailwindCSS</li>
+                            <li>SCSS</li>
+                            <li>Python</li>
+                            <li>Flask</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="experience">
+                    <div class="experience__date">2020</div>
+                    <div class="experience__info">
+                        <h3 class="title">
+                            <a
+                                href="https://www.linkedin.com/company/virtual-crafters/"
+                                target="_blank"
+                            >
+                                Full Stack Developer (Internship) - Virtual Crafters
+
+                                <i class="fa-sharp fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+                        </h3>
+
+                        <p class="desc">
+                            Collaborated with various talents to track our tactical objectives,
+                            improve technical directions and shipping frequency.
+                        </p>
+                        <ul class="tech">
+                            <li>jQuery</li>
+                            <li>SCSS</li>
+                            <li>Bootstrap</li>
+                            <li>PHP</li>
+                            <li>WordPress</li>
+                            <li>Shopify</li>
+                            <li>Liquid</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CONTACT -->
+            <section id="contact" class="contact">
+                <div class="section-heading">
+                    <h2 class="heading-secondary">Contact</h2>
+                    <p class="sub-content">
+                        Have a question or just want to say hi? I'll try my best to get back to you!
+                    </p>
+                </div>
+
+                <a
+                    class="contact__email-link"
+                    href="mailto:vital.renzjohn@gmail.com"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    >Reach Out</a
+                >
+            </section>
+        </main>
+
+        <footer class="footer">
+            <a class="footer__credits" href="https://github.com/rvitality/v1" target="_blank">
+                Built by Renz Vital
+                <span class="rights"> All rights reserved. </span>
+            </a>
+        </footer>
+
+        
+    </body>
+</html>
