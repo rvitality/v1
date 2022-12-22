@@ -1,3 +1,5 @@
+@use "../abstracts/mixins" as *;
+
 .container {
     max-width: 55vw;
     background-color: #fff;
@@ -7,6 +9,14 @@
     padding: 2rem;
     border-radius: 0.75rem;
     font-family: "Poppins";
+
+    @include respond(tab-port) {
+        max-width: 65vw;
+    }
+
+    @include respond(phone) {
+        max-width: 100vw;
+    }
 }
 
 .intro {
@@ -60,6 +70,10 @@
         max-width: 80%;
         font-weight: 300;
         font-size: 0.95rem;
+
+        @include respond(phone) {
+            max-width: 100%;
+        }
     }
 }
 
@@ -73,8 +87,16 @@
         display: flex;
         gap: 2rem;
 
+        @include respond(phone) {
+            flex-direction: column;
+        }
+
         .info {
             width: 40%;
+
+            @include respond(phone) {
+                width: 100%;
+            }
 
             .sub-content {
                 font-size: 0.95rem;
@@ -119,6 +141,11 @@
             width: 60%;
             position: relative;
 
+            @include respond(phone) {
+                width: 100%;
+                align-items: center;
+            }
+
             &__box {
                 background-color: #fff;
                 box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
@@ -144,6 +171,16 @@
                 img {
                     width: 15rem;
                 }
+
+                @include respond(phone) {
+                    position: relative;
+                    top: unset;
+
+                    img {
+                        height: 10rem;
+                        width: 20rem;
+                    }
+                }
             }
 
             .portrait {
@@ -155,6 +192,10 @@
                     height: 15rem;
                     object-fit: contain;
                     width: 15rem;
+                }
+
+                @include respond(phone) {
+                    top: unset;
                 }
             }
         }
@@ -183,10 +224,19 @@
 .hackathons {
     margin-top: 10rem;
 
+    @include respond(phone) {
+        margin-top: 0;
+    }
+
     .masonry {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
+
         gap: 1rem;
+
+        @include respond(phone) {
+            grid-template-columns: 1fr 1fr;
+        }
 
         .grid {
             border: 1px solid #ccc;
@@ -233,6 +283,11 @@
         gap: 2rem;
         margin-bottom: 3rem;
 
+        @include respond(phone) {
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
         &__date {
             width: 20%;
         }
@@ -244,13 +299,10 @@
                 font-size: 1.1rem;
 
                 a {
-                    display: flex;
-                    align-items: center;
-                    gap: 1rem;
-
                     i {
                         transition: transform 0.2s ease-in-out;
                         transform: translateY(0);
+                        margin-left: 0.5rem;
                     }
 
                     &:hover i {
@@ -266,6 +318,11 @@
             .tech {
                 margin-top: 0.5rem;
                 display: flex;
+                flex-wrap: wrap;
+
+                li {
+                    display: flex;
+                }
 
                 li:not(:last-child):after {
                     content: "•";
