@@ -32,12 +32,12 @@
 
         .name {
             align-items: center;
-            gap: 0.5rem;
+            gap: 0.6rem;
             display: flex;
 
             i {
-                font-size: 1.4rem;
-                color: #735572;
+                font-size: 1.2rem;
+                color: #030374;
             }
         }
 
@@ -56,7 +56,8 @@
 
     &__about {
         text-align: center;
-        margin-top: 2rem;
+        margin: 2rem auto 0 auto;
+        max-width: 80%;
         font-weight: 300;
         font-size: 0.95rem;
     }
