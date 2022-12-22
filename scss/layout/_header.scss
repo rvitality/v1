@@ -1,3 +1,5 @@
+@use "../abstracts/mixins" as *;
+
 .header {
     margin: 0 auto;
     position: absolute;
@@ -13,6 +15,11 @@
         justify-content: space-between;
         max-width: 75%;
         padding: 1.25rem 0;
+
+        @include respond(phone) {
+            max-width: 100%;
+            padding: 1.25rem 2rem;
+        }
     }
 
     .left {
@@ -24,6 +31,10 @@
             display: flex;
             align-items: center;
             gap: 1.25rem;
+
+            @include respond(phone) {
+                display: none;
+            }
 
             a {
                 position: relative;
