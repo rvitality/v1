@@ -54,7 +54,6 @@
         .specifics {
             display: flex;
             font-weight: 300;
-            font-size: 0.9rem;
 
             li:not(:last-child):after {
                 content: "•";
@@ -67,9 +66,8 @@
     &__about {
         text-align: center;
         margin: 2rem auto 0 auto;
-        max-width: 80%;
+        max-width: 70%;
         font-weight: 300;
-        font-size: 0.95rem;
 
         @include respond(phone) {
             max-width: 100%;
@@ -82,10 +80,24 @@
         margin-top: 0.25rem;
     }
 
-    .project {
-        margin-bottom: 7.5rem;
+    .preview-container {
         display: flex;
-        gap: 2rem;
+        flex-direction: column;
+        gap: 15rem;
+    }
+
+    .status {
+        text-transform: uppercase;
+        font-weight: 400;
+        color: #777;
+        letter-spacing: 0.5rem;
+        font-size: 1.05rem;
+        margin-bottom: 0.35rem;
+    }
+
+    .project {
+        display: flex;
+        gap: 5rem;
 
         @include respond(phone) {
             flex-direction: column;
@@ -97,17 +109,12 @@
             @include respond(phone) {
                 width: 100%;
             }
-
-            .sub-content {
-                font-size: 0.95rem;
-            }
         }
 
         .tech {
             display: flex;
             flex-wrap: wrap;
             margin-top: 1rem;
-            font-weight: 300;
 
             li:not(:last-child):after {
                 content: "\00b7";
@@ -126,13 +133,14 @@
             a {
                 transition: all 0.2s ease-in-out;
                 transform: translateY(0);
+
                 &:hover {
                     transform: translateY(-1px);
                 }
-            }
 
-            a:first-child {
-                font-size: 1.35rem;
+                .scale-up {
+                    font-size: 1.38rem;
+                }
             }
         }
 
@@ -147,12 +155,21 @@
             }
 
             &__box {
+                position: relative;
                 background-color: #fff;
                 box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
                     rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
-                transition: all 0.25s ease-out;
+
+                transition: all 0.2s;
+                outline-offset: 2rem;
+
+                &:hover {
+                    z-index: 9 !important;
+                    transform: scale(1.05) translateY(1rem);
+                }
 
                 .content {
+                    display: none;
                     padding: 1rem;
 
                     p {
@@ -160,16 +177,21 @@
                         font-size: 0.9rem;
                     }
                 }
+
+                &:hover &__photo:not(:hover) {
+                    transform: scale(0.95);
+                }
             }
 
             .landscape {
                 position: absolute;
-                top: 15%;
-                z-index: 1;
-                width: 100%;
+                top: 40%;
+                z-index: 3;
 
                 img {
-                    width: 15rem;
+                    display: block;
+                    object-fit: contain;
+                    width: 32rem;
                 }
 
                 @include respond(phone) {
@@ -189,9 +211,9 @@
                 z-index: 2;
 
                 img {
-                    height: 15rem;
+                    display: block;
                     object-fit: contain;
-                    width: 15rem;
+                    height: 25rem;
                 }
 
                 @include respond(phone) {
@@ -219,10 +241,14 @@
             }
         }
     }
+
+    .gray-out {
+        margin-top: 1rem;
+    }
 }
 
 .hackathons {
-    margin-top: 10rem;
+    margin-top: 16rem;
 
     @include respond(phone) {
         margin-top: 0;
@@ -256,18 +282,18 @@
 
             &__thumbnail {
                 width: 100%;
-                height: 10rem;
+                height: 15rem;
                 object-fit: cover;
             }
 
             &__caption {
                 padding: 0.5rem 0.8rem;
                 .title {
-                    font-size: 1.05rem;
+                    font-size: 1.25rem;
                 }
 
                 .tagline {
-                    font-size: 0.85rem;
+                    font-size: 1.05rem;
                     font-weight: 300;
                     color: #555;
                     margin-top: 0.25rem;
@@ -290,13 +316,14 @@
 
         &__date {
             width: 20%;
+            font-size: 1.15rem;
         }
 
         &__info {
             width: 100%;
             .title {
                 font-weight: 500;
-                font-size: 1.1rem;
+                font-size: 1.25rem;
 
                 a {
                     i {
@@ -313,6 +340,7 @@
 
             .desc {
                 font-weight: 300;
+                font-size: 1.05rem;
             }
 
             .tech {
@@ -336,6 +364,7 @@
 
 .contact {
     &__email-link {
+        font-size: 1.1rem;
         margin: 0 auto;
         display: block;
         border: 1px solid #aaa;
