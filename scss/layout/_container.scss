@@ -134,6 +134,10 @@
                 transition: all 0.2s ease-in-out;
                 transform: translateY(0);
 
+                &.disabled {
+                    color: #999;
+                }
+
                 &:hover {
                     transform: translateY(-1px);
                 }
@@ -229,6 +233,7 @@
             .tech {
                 justify-content: flex-end;
             }
+
             .links {
                 justify-content: flex-end;
             }
@@ -288,6 +293,7 @@
 
             &__caption {
                 padding: 0.5rem 0.8rem;
+
                 .title {
                     font-size: 1.25rem;
                 }
@@ -321,9 +327,11 @@
 
         &__info {
             width: 100%;
+
             .title {
                 font-weight: 500;
                 font-size: 1.25rem;
+                margin-bottom: .5rem;
 
                 a {
                     i {
@@ -338,13 +346,21 @@
                 }
             }
 
+            .work-desc-list {
+                padding-left: 2rem;
+
+                li {
+                    list-style-type: disc;
+                }
+            }
+
             .desc {
                 font-weight: 300;
                 font-size: 1.05rem;
             }
 
             .tech {
-                margin-top: 0.5rem;
+                margin: 0.5rem 0;
                 display: flex;
                 flex-wrap: wrap;
 
